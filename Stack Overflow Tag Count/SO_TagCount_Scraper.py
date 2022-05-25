@@ -19,7 +19,7 @@ def extract_tagged(url):
         df['Tag_Count'].append(count.text)
     
 for i in range(1,3):
-    extract_tagged('http://stackoverflow.com/tags?page='+str(i)+'&tab=popular')    
+    extract_tagged(f'http://stackoverflow.com/tags?page={str(i)}&tab=popular')
 df['Tag_Count']=[int(i) for i in df['Tag_Count']]
 
 df2= pd.DataFrame(df)

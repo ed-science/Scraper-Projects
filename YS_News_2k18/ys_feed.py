@@ -4,4 +4,4 @@ url='https://yourstory.com/feed'
 content = requests.get(url).content
 soup = BeautifulSoup(content, "html.parser")
 for n,t in enumerate(soup.findAll("title")):
-    print(str(n) + " - "+ t.text)
+    print(f"{str(n)} - {t.text}")

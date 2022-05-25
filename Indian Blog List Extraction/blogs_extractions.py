@@ -31,7 +31,7 @@ for link in soup.find_all('a',):
         else:
             cat['others']+=1
         #d['len'].append(len(link.text.strip()))
-    
+
 blog_list = pd.DataFrame(d).set_index('title')
 
 
@@ -39,7 +39,7 @@ print(blog_list.head())
 
 blog_list.to_csv('blog_list.csv', encoding='utf-8')
 
-print(str(len(blog_list.index))+' rows written')
+print(f'{len(blog_list.index)} rows written')
 
 print(cat)
 
